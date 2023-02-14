@@ -1,0 +1,129 @@
+@use './variables';
+@use './mixins';
+
+
+body {
+  background-color: variables.$Off-white;
+
+  @include mixins.margin_padding(0,0, 0, 20px);
+
+
+  header {
+    @include mixins.margin_padding(30px, 0, 0, 0);
+
+    .offcanvas {
+      max-width: 60%
+    }
+  }
+
+  main {
+    @include mixins.margin_padding(30px, 0, 0, 0);
+  }
+
+
+
+  .article__container__row {
+
+    &__column {
+
+      &__img {
+        width: 30%;
+      }
+      &__text {
+        h2 {
+          @include mixins.title (2, 700, variables.$GrayishBlue);
+        }
+
+        h3 {
+          @include mixins.title (1.25, 700, variables.$VeryDarkBlue);
+          cursor: pointer;
+          
+          &:hover {
+            @include mixins.textHover(variables.$SoftRed);
+          }
+        }
+
+        p {
+          @include mixins.Paragraph();
+        }
+      }
+    }
+  }
+}
+
+
+
+.article__container__row__column__inner__row {
+
+  &__img {
+    width: 100%;
+
+    @media only screen and (max-width: 996px) {
+      height: 230px;
+    }
+  }
+
+  &__text {
+
+    &__h1 {
+      @include mixins.title (3, 800, variables.$VeryDarkBlue);
+
+    }
+
+    &__p {
+      @include mixins.Paragraph();
+
+      @media only screen and (min-width: 996px) {
+        @include mixins.margin_padding(30px,20px, 0, 0);
+      }
+    }
+
+    &__button {
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      
+      @media only screen and (min-width: 996px) {
+        @include mixins.margin_padding(30px,20px, 0, 0);
+      }
+    }
+  }
+
+
+}
+
+#article__container__section2 {
+
+  background-color: variables.$VeryDarkBlue;
+  @include mixins.margin_padding(0,0, 30px, 20px);
+
+  h1 {
+      
+    @include mixins.title (2, 800, variables.$SoftOrange);
+  }
+
+  .article__container__row__column__div {
+
+    @include mixins.margin_padding(0,0, 15px, 0);
+
+    @media only screen and (min-width: 996px) {
+      @include mixins.margin_padding(0,0, 30px, 0);
+    }
+
+
+    h2 {
+      @include mixins.title (1.5, 700, variables.$Off-white);
+      cursor: pointer;
+
+      &:hover {
+        @include mixins.textHover(variables.$SoftOrange);
+      }
+    }
+
+    p {
+      @include mixins.Paragraph();
+      
+    }
+  }
+
+}

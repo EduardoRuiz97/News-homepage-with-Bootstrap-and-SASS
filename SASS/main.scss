@@ -1,0 +1,31 @@
+
+
+@use './reset';
+@use './styles';
+
+$grid-gutter-width: 0;
+$enable-rounded: false;
+$primary: #00001a;
+$btn-font-weight: 400;
+
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+:root {
+  --bs-body-bg: hsl(36, 100%, 99%);
+
+  /*--------button-----------*/
+  --bs-btn-font-family: 'Inter', sans-serif;
+  --bs-btn-font-size: 0.85rem;
+  --bs-btn-hover-bg: hsl(35, 77%, 62%);
+
+
+  /*-------NavBar*/
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-nav-link-font-weight: 400;
+  --bs-emphasis-color-rgb: $primary;
+
+  --bs-offcanvas-bg: hsl(36, 100%, 99%);
+}
